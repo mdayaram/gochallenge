@@ -12,7 +12,8 @@ to know anything about our internal code base.
 ### HTTP File Server
 
 * Difficulty: Easy
-* Knowledge Target: Go's HTTP Standard Libraries.
+* Knowledge Target: Go's [HTTP Standard
+	Libraries](http://golang.org/pkg/net/http/).
 
 #### Context
 
@@ -32,28 +33,30 @@ starting it programmatically.
 ### Flag Parsing Package
 
 * Difficulty: Medium
-* Knowledge Target: Go's Reflection Standard Libraries.
+* Knowledge Target: Go's [Reflection Standard
+	Libraries](http://golang.org/pkg/reflect/)
 
 #### Context
 
-Flags
+placeholder
 
 #### Goal
 
-Goalie!
+placeholder
 
 ### Write a Reimplementation of Git in Go
 
 * Difficulty: Hard
-* Knowledge Target: Go's IO Standard Libraries, Intimate Understanding of Git.
+* Knowledge Target: Go's [IO Standard Libraries](http://golang.org/pkg/io/),
+	Intimate Understanding of Git.
 
 #### Context
 
-Gits!
+placeholder
 
 #### Goal
 
-Goooooit
+placeholder
 
 ## Resources
 
