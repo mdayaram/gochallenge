@@ -48,7 +48,7 @@ placeholder
 
 * Difficulty: Hard
 * Knowledge Target: Go's [IO Standard Libraries](http://golang.org/pkg/io/),
-	Intimate Understanding of Git.
+	Intimate Understanding of Git, API/Interface design.
 
 #### Context
 
