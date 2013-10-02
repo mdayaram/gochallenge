@@ -7,10 +7,11 @@ that I've come up with which would be relatively useful for
 [moovweb](http://github.com/moovweb) but isolated enough that you wouldn't need
 to know anything about our internal code base.
 
+
 ## Challenge Projects
 
 ### HTTP File Server
-
+--------------------
 * Difficulty: Easy
 * Knowledge Target: Go's [HTTP Standard
 	Libraries](http://golang.org/pkg/net/http/).
@@ -30,8 +31,9 @@ should take in as input a root directory in which to serve files from.  You
 should provide an interface in Go for creating an instance of your server and
 starting it programmatically.
 
-### Flag Parsing Package
 
+### Flag Parsing Package
+------------------------
 * Difficulty: Medium
 * Knowledge Target: Go's [Reflection Standard
 	Libraries](http://golang.org/pkg/reflect/)
@@ -44,8 +46,9 @@ placeholder
 
 placeholder
 
-### Write a Reimplementation of Git in Go
 
+### Write a Reimplementation of Git in Go
+-----------------------------------------
 * Difficulty: Hard
 * Knowledge Target: Go's [IO Standard Libraries](http://golang.org/pkg/io/),
 	Intimate Understanding of Git, API/Interface design.
@@ -57,6 +60,7 @@ placeholder
 #### Goal
 
 placeholder
+
 
 ## Resources
 
