@@ -32,7 +32,7 @@ should provide an interface in Go for creating an instance of your server and
 starting it programmatically.
 
 
-### Worker Pool Server
+### Jello Server
 ----------------------
 * Difficulty: Medium
 * Knowledge Target: Understand how moovweb's server works, go routines,
