@@ -206,7 +206,7 @@ a blocking operation.
 Go comes with a [flag parsing package](http://golang.org/pkg/flag/) in its
 standard library.  However, after much use, we've found it to be very limiting.
 Below is a list of things we *wished* Go's flag parsing package would have but
-that we haven't really had the time to implements.
+that we haven't really had the time to implement.
 
 1. A mode where we can continue parsing flags even if we reach a non-flag
 	 argument.
@@ -272,6 +272,11 @@ You can download and install Go using a variety of methods:
 
 ### Learning about Go
 
+For pure beginners, a great place to start and get your bearings is in the [How
+to Write Go Code](http://golang.org/doc/code.html) tutorial which teaches you
+the essentials on how to organize your code, important environment variables to
+set, and general code structure.
+
 If you haven't already, I would strongly recommend you take the [Golang
 Tour](http://tour.golang.org/).  It's a very well done tour that teaches you the
 essentials of the language without bogging you down with any of the details.
@@ -294,7 +299,8 @@ line tool [godoc](http://golang.org/cmd/godoc/) for all your API doc needs.
 
 So, to summarize:
 
-* [Golang Tour](http://tour.golang.org/) to get your started in Go.
+* [How to Write Go Code](http://golang.org/doc/code.html) to get started in Go.
+* [Golang Tour](http://tour.golang.org/) to learn the basics of the language.
 * [Effective Go](http://golang.org/doc/effective_go.html) for a deeper dive.
 * [Golang Playground](http://play.golang.org/) for testing snippets of code.
 * [Online API Docs](http://golang.org/pkg/) or the [godoc](http://golang.org/cmd/godoc/)
