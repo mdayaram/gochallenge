@@ -25,8 +25,7 @@ to know anything about our internal code base.
 * Potential for open source!
 
 
-### [Write a Reimplementation of Git in
-Go](https://github.com/mdayaram/gochallenge/blob/master/git.md)
+### [Write a Reimplementation of Git in Go](https://github.com/mdayaram/gochallenge/blob/master/git.md)
 -----------------------------------------
 * Difficulty: Hard
 * Knowledge Target: Go's [IO Standard Libraries](http://golang.org/pkg/io/),
