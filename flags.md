@@ -1,6 +1,6 @@
 Flag Parsing Package
 ====================
-* Difficulty: Easy
+* Difficulty: Medium
 * Knowledge Target: Parsing args, pointers, defining structures and types.
 * Potential for open source!
 
