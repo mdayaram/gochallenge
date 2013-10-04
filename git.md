@@ -1,4 +1,4 @@
-Write a Reimplementation of Git in Go
+Reimplementation of Git in Go
 =====================================
 * Difficulty: Hard
 * Knowledge Target: Go's [IO Standard Libraries](http://golang.org/pkg/io/),
