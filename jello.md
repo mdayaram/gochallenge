@@ -96,7 +96,7 @@ set of worker goroutines are all polling from in order to perform
 Work<sub>2</sub>.  The structure of this pool is identical to the first worker
 pool except for the actual work being performed.
 
-In our restaurant anology, this is the equivalent of hiring specialists for each
+In our restaurant analogy, this is the equivalent of hiring specialists for each
 job.  At the start of the restaurant, we basically make a decision of "how many
 jello mixers do we want?" and "how many plating specialists do we want?"  Once
 we've made a decision, let's say, four each, then we hire that many chefs that
