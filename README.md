@@ -255,7 +255,8 @@ a pretty cool project and would earn mad open source points in the community.
 Basically, there have been [tons of libraries](http://godoc.org/?q=git) written
 in Go to interface Git related operations.  However, all of these libraries are
 either Go code executing `git` commands using `exec` or Cgo bindings to the C
-library [libgit2](http://libgit2.github.com/).
+library [libgit2](http://libgit2.github.com/).  There's a huge deficit on
+a robust go-native library for git operations.
 
 There's a nice [stack overflow
 question](http://stackoverflow.com/questions/4034962/which-language-has-the-best-git-api-bindings)
@@ -286,10 +287,10 @@ I would first approach this by figuring out what the lowest level commands Git
 has are and then begin implementing those first.  Once you have those done, you
 can go ahead and build on top of them to make the more complex level commands.
 
-In terms of Go, this project is a great case study on code architecture.  If
-done properly, you can use Go's structures and type definitions to your
-advantage.  I would take a look at some of the above linked open source projects
-for inspiration.
+In terms of Go, this project is a great case study on code architecture and API
+design.  If done properly, you can use Go's structures, types, and interfaces
+to your advantage.  I would take a look at some of the above linked open source
+projects for inspiration.
 
 
 ## Resources
