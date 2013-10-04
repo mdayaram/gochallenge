@@ -4,7 +4,7 @@ Jello Server
 * Knowledge Target: Understand how Moovweb's Server works, Go's [Concurrency
 	Constructs](http://www.golang-book.com/10).
 
-#### Context
+## Context
 
 This project would not be directly applicable to anything we currently do in the
 platform team, however, for those interested, it should help you understand how
@@ -34,7 +34,7 @@ down to the type of resource they would need in order to execute:
 Let's discuss a few different approaches...
 
 
-**The Generalist Approach**
+### The Generalist Approach
 
 Every request that comes in as a new goroutine and that goroutine goes through
 each one of the tasks it needs to execute.  This is great in the sense that we
@@ -73,7 +73,7 @@ problems created?  How does having a fixed number of waiters limit our
 restaurant's output?
 
 
-**The Specialist Approach**
+### The Specialist Approach
 
 For this approach, every request will come in as a new goroutine just as with
 the obvious approach.  However, instead of going ahead and doing the first
@@ -143,7 +143,7 @@ yourselves.  I'm also available for discussions if you'd like to validate your
 answers or have any more questions you'd like to raise.
 
 
-#### Goal
+## Goal
 
 In addition to participating in the above thought experiments, your goal is to
 write a web server in Go with the architecture described in the **Speacialist

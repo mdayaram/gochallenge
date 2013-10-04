@@ -4,7 +4,7 @@ Flag Parsing Package
 * Knowledge Target: Parsing args, pointers, defining structures and types.
 * Potential for open source!
 
-#### Context
+## Context
 
 Go comes with a [flag parsing package](http://golang.org/pkg/flag/) in its
 standard library.  However, after much use, we've found it to be very limiting.
@@ -31,7 +31,7 @@ a flexible flag parsing package which came with all these options by default.
 Assuming we're not the only ones suffering through the default flag's package
 inadequacies, this would make a great open source project.
 
-#### Goal
+## Goal
 
 Your goal is to implement a flag parsing package with as many of the above
 listed features (perhaps even more if you can think of any!) in Go.  It's
