@@ -35,8 +35,8 @@ starting it programmatically.
 ### Jello Server
 ----------------------
 * Difficulty: Medium
-* Knowledge Target: Understand how moovweb's server works, go routines,
-	channels.
+* Knowledge Target: Understand how Moovweb's Server works, Go's [Concurrency
+	Constructs](http://www.golang-book.com/10).
 
 #### Context
 
@@ -55,8 +55,8 @@ of tasks on that request:
 2. We forward the rewritten request to the upstream server
 3. We rewrite the response
 
-Finally, after rewriting the response we've received from the upstream, we
-respond to the original client with the rewritten response.
+Once we're done rewriting the upstream response, we go ahead and respond to our
+client.
 
 Now, to understand our constraints better, let's reduce each one of these tasks
 down to the type of resource they would need in order to execute:
@@ -64,6 +64,8 @@ down to the type of resource they would need in order to execute:
 1. CPU Work<sub>1</sub>
 2. IO Block
 3. CPU Work<sub>2</sub>
+
+Let's discuss a few different approaches...
 
 
 **The Generalist Approach**
@@ -95,8 +97,9 @@ waiter every time we get an order in, even if there are already several waiters
 in the kitchen, each one working on their own order.
 
 One obvious variation to this approach would be to start off by hiring a fixed
-number of waiters at the start of the restaurant's opening and only have them
-taking orders and cooking jello.
+number of waiters at the start of the restaurant's opening.  If an order comes
+in, it would only be serviced once one of our waiters becomes available to
+receive it.
 
 *What new constraints are imposed on our system given this new variation?*
 Think about what problems from above this variation solves.  Are any new
@@ -119,20 +122,20 @@ sole job is to do the following:
 	 queued the work.
 4. Repeat.
 
-After the original goroutine receives a response from a worker, it goes ahead
-and performs the IO blocking operation.  Once that is done, it queues the
-necessary elements for work onto a different channel where another set of worker
-goroutines are all polling from in order to perform Work<sub>2</sub>.  This set
-is identical to the first worker pool except for the actual work
-being performed.
+After the original goroutine receives a response from a worker that its job is
+done, it goes ahead and performs the IO blocking operation.  Once that is done,
+it queues the necessary elements for work onto a different channel where another
+set of worker goroutines are all polling from in order to perform
+Work<sub>2</sub>.  The structure of this pool is identical to the first worker
+pool except for the actual work being performed.
 
-In our restaurant anology, this is the equivalent of hiring specialist for each
+In our restaurant anology, this is the equivalent of hiring specialists for each
 job.  At the start of the restaurant, we basically make a decision of "how many
-jello mixers do we want?" and "how many plating specialists and jello testers do
-we want?"  Once we've made a decision, let's say, four each, then we hire that
-many chefs that specialize in those aspects.
+jello mixers do we want?" and "how many plating specialists do we want?"  Once
+we've made a decision, let's say, four each, then we hire that many chefs that
+specialize in those aspects.
 
-When an order comes in, we again hire a waiter to take that order, but
+When an order comes in, we again hire a new waiter to take that order, but
 instead of cooking the jello themselves, the waiter queues up the order to the
 jello mixing chefs.  Now, we only have a few of them, so they can't start making
 the jello right away, but as soon as one of them is free, they'll take up the
@@ -169,7 +172,7 @@ I've left the above questions somewhat open ended to provide you with the same
 thought experiments we had to deal with when deciding our architecture.
 I encourage all of you to think about these question and try to come up with
 your own answers.  However, engineering (though it may not seem like it) is a
-social endeavor, so I encourage you to discuss possible solutions amongst
+social endeavor, so I also encourage you to discuss possible solutions amongst
 yourselves.  I'm also available for discussions if you'd like to validate your
 answers or have any more questions you'd like to raise.
 
@@ -187,8 +190,8 @@ However, a simple example could be as follows:
 2. IO Block: Read a random file from disk.
 3. CPU Work<sub>2</sub>: Count all occurrences of each random word in the file.
 
-Anything creative would suffice, as long you maintain the constraints that the
-work must be CPU intensive and the blocking operation is...well, just that,
+Anything creative would suffice, as long as you maintain the constraints that
+the work must be CPU intensive and the blocking operation is...well, just that,
 a blocking operation.
 
 
