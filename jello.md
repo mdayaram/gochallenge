@@ -9,10 +9,10 @@ Jello Server
 This project would not be directly applicable to anything we currently do in the
 platform team, however, for those interested, it should help you understand how
 our server architecture works.  **Everything discussed in this document is
-copyrighted under Moovweb**.  The server architecture we've decided upon was
-birthed through several conversations, discussions, and prototypes.  In the end,
-we ended up leveraging a lot of Go's concurrency constructs in order to get
-something that is resource efficient.
+copyrighted under [Moovweb](http://www.moovweb.com)**.  The server architecture
+we've decided upon was birthed through several conversations, discussions, and
+prototypes.  In the end, we ended up leveraging a lot of Go's concurrency
+constructs in order to get something that is resource efficient.
 
 So what is the architecture like?  Let's start out by defining what our server
 needs to do.  When our server receives a request, it needs to perform a series
