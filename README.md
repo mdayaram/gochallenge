@@ -11,21 +11,21 @@ to know anything about our internal code base.
 ## Challenge Projects
 
 
-### [HTTP File Server](https://github.com/mdayaram/gochallenge/blob/master/file-server.md)
+### [HTTP File Server](file-server.md)
 * Difficulty: Easy
 * Knowledge Target: Go's [HTTP Standard
 	Libraries](http://golang.org/pkg/net/http/).
 
 ----
 
-### [Flag Parsing Package](https://github.com/mdayaram/gochallenge/blob/master/flags.md)
+### [Flag Parsing Package](flags.md)
 * Difficulty: Medium
 * Knowledge Target: Parsing args, pointers, defining structures and types.
 * Potential for open source!
 
 ----
 
-### [Write a Reimplementation of Git in Go](https://github.com/mdayaram/gochallenge/blob/master/git.md)
+### [Write a Reimplementation of Git in Go](git.md)
 * Difficulty: Hard
 * Knowledge Target: Go's [IO Standard Libraries](http://golang.org/pkg/io/),
 	Intimate Understanding of Git, API/Interface design.
@@ -33,7 +33,7 @@ to know anything about our internal code base.
 
 ----
 
-### [Jello Server](https://github.com/mdayaram/gochallenge/blob/master/jello.md)
+### [Jello Server](jello.md)
 * Difficulty: Hard
 * Knowledge Target: Understand the Architecture behind Moovweb's Server, Go's [Concurrency
 	Constructs](http://www.golang-book.com/10).
